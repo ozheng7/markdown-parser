@@ -33,14 +33,17 @@ public class MarkdownParse {
             }
 
             if (charIndex == markdown.length() - 1) {
+                System.out.println(markdown);
+                System.out.println(toReturn);
                 return toReturn;
             }
 
             //toReturn.add(markdown.substring(openParen + 1, closeParen));
 
-            System.out.println(currentIndex);
         }
 
+        System.out.println(markdown);
+        System.out.println(toReturn);
         return toReturn;
     }
 
