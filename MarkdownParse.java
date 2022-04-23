@@ -52,5 +52,6 @@ public class MarkdownParse {
 	    System.out.println(links);
 
         System.out.println("lab4");
+        System.out.println(MarkdownParse.getLinks("part4-file.md"));
     }
 }
