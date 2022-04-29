@@ -21,52 +21,52 @@ public class MarkdownParseTest {
         Path filename = Path.of("test-file.md");
         String contents = Files.readString(filename);
 
-        // assertEquals(List.of("https://something.com", "some-thing.html")
-        // , MarkdownParse.getLinks(contents));
+        assertEquals(List.of("https://something.com", "some-thing.html")
+        , MarkdownParse.getLinks(contents));
 
-        // filename = Path.of("test-file2.md");
-        // contents = Files.readString(filename);
-
-        // assertEquals(List.of("https://something.com", "some-page.html")
-        // , MarkdownParse.getLinks(contents));
-
-        // filename = Path.of("test-file3.md");
-        // contents = Files.readString(filename);
-
-        // assertEquals(List.of()
-        // , MarkdownParse.getLinks(contents));
-
-        // filename = Path.of("test-file4.md");
-        // contents = Files.readString(filename);
-
-        // assertEquals(List.of()
-        // , MarkdownParse.getLinks(contents));
-
-        // filename = Path.of("test-file5.md");
-        // contents = Files.readString(filename);
-
-        // assertEquals(List.of("page.com")
-        // , MarkdownParse.getLinks(contents));
-
-        // filename = Path.of("test-file6.md");
-        // contents = Files.readString(filename);
-
-        // assertEquals(List.of("page.com")
-        // , MarkdownParse.getLinks(contents));
-
-        filename = Path.of("test-file7.md");
+        filename = Path.of("test-file2.md");
         contents = Files.readString(filename);
+
+        assertEquals(List.of("https://something.com", "some-page.html")
+        , MarkdownParse.getLinks(contents));
+
+        filename = Path.of("test-file3.md");
+        contents = Files.readString(filename);
+
+        assertEquals(List.of()
+        , MarkdownParse.getLinks(contents));
+
+        filename = Path.of("test-file4.md");
+        contents = Files.readString(filename);
+
+        assertEquals(List.of()
+        , MarkdownParse.getLinks(contents));
+
+        filename = Path.of("test-file5.md");
+        contents = Files.readString(filename);
+
+        assertEquals(List.of("page.com")
+        , MarkdownParse.getLinks(contents));
+
+        filename = Path.of("test-file6.md");
+        contents = Files.readString(filename);
+
+        assertEquals(List.of("page.com")
+        , MarkdownParse.getLinks(contents));
+
+//         filename = Path.of("test-file7.md");
+//         contents = Files.readString(filename);
 
   //      assertEquals(new ArrayList<>()
     //    , MarkdownParse.getLinks(contents));
 
-        ArrayList <String> result = new ArrayList<String>();
-        assertEquals(result, MarkdownParse.getLinks(contents));
+//         ArrayList <String> result = new ArrayList<String>();
+//         assertEquals(result, MarkdownParse.getLinks(contents));
 
-        // filename = Path.of("test-file8.md");
-        // contents = Files.readString(filename);
+        filename = Path.of("test-file8.md");
+        contents = Files.readString(filename);
 
-        // assertEquals(List.of("a link on the first line")
-        // , MarkdownParse.getLinks(contents));
+        assertEquals(List.of("a link on the first line")
+        , MarkdownParse.getLinks(contents));
     }
 }
