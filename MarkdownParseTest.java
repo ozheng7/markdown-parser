@@ -73,6 +73,6 @@ public class MarkdownParseTest {
         contents = Files.readString(filename);
 
         assertEquals(List.of("https://something.com", "some-page.html", "link", "link2"), 
-        MarkdownParse.getLinks(contents));
+        MarkdownParse.getLinks(contents) );
     }
 }
