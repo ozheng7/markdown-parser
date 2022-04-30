@@ -68,5 +68,11 @@ public class MarkdownParseTest {
 
         assertEquals(List.of("a link on the first line")
         , MarkdownParse.getLinks(contents));
+
+        filename = Path.of("test-file-lab5.txt");
+        contents = Files.readString(filename);
+
+        assertEquals(List.of("https://something.com", "some-page.html", "link", "link2"), 
+        MarkdownParse.getLinks(contents));
     }
 }

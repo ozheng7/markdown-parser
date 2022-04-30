@@ -33,17 +33,35 @@ public class MarkdownParse {
             }
 
             if (charIndex == markdown.length() - 1) {
-                System.out.println(markdown);
-                System.out.println(toReturn);
-                return toReturn;
+                break;
             }
 
             //toReturn.add(markdown.substring(openParen + 1, closeParen));
 
         }
 
-        System.out.println(markdown);
-        System.out.println(toReturn);
+        int lessThan = 0;
+        int greaterThan = 0;
+
+        // for(int i = 0; i < markdown.length(); i ++) {
+        //     if (markdown.charAt(i) == '<') {
+        //         lessThan = i;
+        //         boolean there = true;
+        //         while(there) {
+        //             if (markdown.charAt(i) == '>') {
+        //                 greaterThan = i;
+        //                 there = false;
+        //             }
+        //             else {
+        //                 i ++;
+        //             }
+        //         }
+        //         toReturn.add(markdown.substring(lessThan + 1, greaterThan));
+        //         lessThan = 0;
+        //         greaterThan = 0;
+        //     }
+        // }
+
         return toReturn;
     }
 
